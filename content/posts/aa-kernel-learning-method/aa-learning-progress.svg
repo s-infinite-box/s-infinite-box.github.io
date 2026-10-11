@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg viewBox="0 0 400 764" width="400" height="764" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="aa-learning-progress-title aa-learning-progress-desc" id="aa-learning-progress-root">
-        <title id="aa-learning-progress-title">aa：当前进度与后续计划</title>
-        <desc id="aa-learning-progress-desc">aa 已验证工程加载和 32 位入口，当前待验证启动检查，随后进入 64 位 Rust 并逐步学习内核子系统。</desc>
+        <title id="aa-learning-progress-title">aa_rust_kernel：当前进度与后续计划</title>
+        <desc id="aa-learning-progress-desc">aa_rust_kernel 已验证工程加载和 32 位入口，当前待验证启动检查，随后进入 64 位 Rust 并逐步学习内核子系统。</desc>
         <defs>
       <style>@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500;600&amp;family=Noto+Serif:ital@0;1&amp;family=Noto+Sans+KR:wght@400;500;600&amp;family=Noto+Serif+KR:wght@400&amp;family=Noto+Sans+TC:wght@400;500;600&amp;family=Noto+Serif+TC:wght@400&amp;display=swap');
       #aa-learning-progress-root { --color-paper:   #f5f5fa;

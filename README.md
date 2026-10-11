@@ -41,6 +41,7 @@
 ├── themes/songminghe/        # 个人主题模板、样式、脚本和组件许可
 ├── scripts/verify-build.py   # 构建产物兼容检查，仅使用 Python 标准库
 ├── scripts/legacy-pages.json # 需要保留的旧分页地址清单
+├── systemd/                  # 本地预览的开机启动配置与说明
 ├── docs/                     # 写作流程和迁移验收记录
 └── .github/workflows/hugo.yml
 ```
@@ -58,6 +59,8 @@ make serve-drafts      # 本地预览包含草稿
 make serve PORT=1314    # 使用其他端口
 make clean             # 清理构建产物
 ```
+
+需要每次开机自动启动预览时，使用 [systemd 用户服务配置与说明](systemd/README.md)。服务直接执行 `make serve-drafts`，默认使用 `~/.local/share/hugo/bin/hugo`，在 `http://localhost:1313/` 预览草稿及已发布内容。新增与修改自动更新，异常退出后自动重试；删除整篇文章或修改文章路径后，重启服务清除旧 URL。
 
 可用 `HUGO=/path/to/hugo` 选择指定二进制。GitHub Actions 固定使用 0.165.0，构建后也会运行检查脚本，检查失败则不上传站点产物。
 

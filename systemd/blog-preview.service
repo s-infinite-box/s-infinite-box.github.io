@@ -1,0 +1,17 @@
+[Unit]
+Description=宋明河博客本地预览（包含草稿）
+# 写作期间出现构建错误时持续重试，修正后自动恢复。
+StartLimitIntervalSec=0
+
+[Service]
+Type=exec
+WorkingDirectory=%h/p/pphome/_sub_mod/SongMingHe
+Environment=TZ=Asia/Shanghai
+# 直接复用 Makefile 的预览命令；Hugo 使用用户指定的默认路径。
+# 删除或改名后重启本服务，以清除旧 URL 的内存输出。
+ExecStart=/usr/bin/make --no-print-directory serve-drafts HUGO=%h/.local/share/hugo/bin/hugo BIND=127.0.0.1 PORT=1313 PREVIEW_URL=http://localhost:1313/ HUGO_FLAGS=--cleanDestinationDir
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
