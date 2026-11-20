@@ -6,6 +6,9 @@
 __pycache__/
 /assets/jsconfig.json
 
+# 防止同步时重新加入已移除的 Stack 主题
+/themes/hugo-theme-stack/
+
 # 编辑器 / 系统
 .idea/
 .vscode/
